@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mybus</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="src/validate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://sdk.twilio.com/js/client/v1.12/twilio.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("gxaAcJrbrng8bGFPG");
+        })();
+    </script>
+</head>
+
+<body>
+    <header>
+        <h3 class="hednav">Mybus</h3>
+        <div class="logBtn">
+            <span class="form" id="login" onclick="swapReg('regform','log')">
+                login
+            </span>
+            <span class="form" id="signup" onclick="swapReg('log','regform')">
+                signup
+            </span>
+        </div>
+    </header>
+    <section class="secOne">
+        <!-- <img class="bgimg" src="assets/whiteBus.jpg" alt=""> -->
+        <div class="reg" id="regform">
+            <form action="">
+                <div class="regContainer" id="regCont">
+                    <h1>Register</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <label for="name">First name</label><input class="Fname" type="text" required>
+                    <label for="name">last name</label><input class="Lname" type="text" required>
+                    <label for="mail">Email-id</label><input id="regEmail" type="email" required>
+                    <label for="password">Password</label><input type="password" id="regPass" required>
+                    <label for="password">Repeat Password</label><input id="rePass" type="password" required>
+                    <input type="submit" value="Sign up" onclick="validate()">
+                </div>
+
+                <h4 id="swap">Already have an account?<a href="#" onclick="swapReg('regform','log')"> Login
+                        here!!</a>
+                </h4>
+            </form>
+        </div>
+        <div class="log" id="log">
+            <form action="">
+                <div class="logContainer">
+                    <label for="mail">Email-id</label><input type="email" id="logEmail" required>
+                    <label for="password">Password</label><input type="password" id="logPass" required>
+                    <p>Forgot password?</p>
+                    <input type="submit" value="Login" onclick="loginSubmit()">
+                    <p>Didn't have an account?<a href="#" onclick="swapReg('log','regform')"> signup here</a>
+                    </p>
+                </div>
+
+            </form>
+        </div>
+        <div class="Main">
+            <h1 class="heading">
+                Book, board, and travel
+                hassle-free!
+
+                <i>Login to book tickets</i>
+            </h1>
+            <img class="Bus" src="assets/bus-312565.png" alt="">
+        </div>
+        <img class="bgdesign" src="assets/Polygon 1.svg" alt="">
+        <p>Last Minute Booking - In a hurry to book a bus at the last minute? Choose the bus passing from your nearest
+            boarding point and book in a few easy steps.</p>
+    </section>
+    <section class="secTwo">
+        <div class="why_cho">
+            <img src="assets/WHy.png" alt="" srcset="">
+            <h1>Why Choose US?</h1>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <img src="assets/safety.png" alt="">
+                <h2>safety</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, iusto? Laborum est, ex reiciendis ipsum
+                </p>
+            </div>
+            <div class="card">
+                <img src="assets/dollar.png" alt="">
+                <h2>Lowest cost</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error esse impedit earum numquam sapiente
+                </p>
+
+            </div>
+            <div class="card">
+                <img src="assets/crown.png" alt="" srcset="">
+                <h2>Premium Service</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nesciunt laborum expedita maiores
+                </p>
+            </div>
+        </div>
+
+    </section>
+    <section class="secThree" id="secThree">
+        <div id="cardOne" class="cardOne">
+            <form onsubmit="myfun('cardOne','cardTwo')" id="cd1Form">
+                <ul>
+                    <li><label for="">Name</label> <input id="cd1Name" type="text" class="fo"></li>
+                    <li>
+                        <label for="">Age</label> <input id="ages" type="number" class="fo">
+                    </li>
+                    <li><label for="">Gender</label>
+                        <select name="" id="gender">
+                            <option value="">Select</option>
+                            <option value="male">male</option>
+                            <option value="female">female</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="">From</label>
+                        <div class="pl"><input id="place1" type="text">
+                            <div id="item1"></div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <label for="">To</label>
+                        <div class="pl"><input id="place2" type="text">
+                            <div id="item2"></div>
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <label for="">Date</label>
+                        <input id="dat" type="date">
+                    </li>
+                    <button type="submit" class="arrow nav-right">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </ul>
+            </form>
+
+        </div>
+        <div class="cardTwo" id="cardTwo">
+            <img class="man" src="assets/Frame.svg" alt="man-standing-on-bus" srcset="">
+            <div class="busInfo">
+                <h2>Volvo 203</h2>
+                <hr>
+                <p>Departure from |<b id="dF"></b>
+                </p>
+                <p>Distance | <b id="Dist"></b> </p>
+                <p>To | <b id="to">"No Result Found"</b></p>
+                <p>Travel Duration | <b id="tD"></b></p>
+            </div>
+            <div class="seatSelect">
+                <div id="seatContainer">
+                    <div id="cont-one">
+                    </div>
+                    <div id="cont-two">
+                    </div>
+                </div>
+                <ul class="stLegend">
+                    <li>Female only</li>
+                    <li>Booked</li>
+                </ul>
+
+            </div>
+            <div class="arrow nav-right" onclick="myfun('cardTwo','cardThree')">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="arrow nav-left" onclick="myfun('cardTwo','cardOne')">
+                <i class="fa-solid fa-arrow-left"></i>
+            </div>
+        </div>
+        <div class="cardThree" id="cardThree">
+            <div class="card3" id="cusInfo">
+                <ul>
+                    <li> <label>Name </label>:<span id="cusName">Gokul</span></li>
+                    <li> <label>Email-Id</label>:<span id="cusEmail">gokularise@gmail.com</span></li>
+                    <li> <label>Departure From</label>:<span id="cusDF"></span></li>
+                    <li> <label>Departure TO</label>:<span id="cusDT"></span></li>
+                </ul>
+            </div>
+            <div class="card3" id="costInfo">
+                <ul>
+                    <li> <label>Total Tickets</label>:<span id="totTicket"></span></li>
+                    <li> <label>Total Price</label>:<span id="ticPrice">1000$</span></li>
+                    <li> <label>Discount</label>:<span>5%</span></li>
+                    <li> <label>Amount payable</label>:<span id="discount">800$</span></li>
+                </ul>
+            </div>
+            <p>Note: please review above information , especially Email (Your tickets will be send to your Email)</p>
+            <form action="" id="final">
+                <div class="card3" id="payment">
+                    <p>Please choose one of the payment method to proceed</p>
+                    <div class="cd3Img">
+                        <i id="G-pay" class="fa-brands fa-google-pay"></i>
+                        <i id="Paypal-Id" class="fa-brands fa-paypal"></i>
+                        <i id="Card-No" class="fa-regular fa-credit-card"></i>
+                        <i id="Apple-Id" class="fa-brands fa-apple-pay"></i>
+                    </div>
+                    <ul>
+                        <li><label for="">Enter <span id="pay-method">G-pay Id</span></label>
+                            <input type="text" required>
+                            <!-- <button id="otpBtn">Send OTP</button> -->
+                        </li>
+                        <!-- <li><label for="">Enter OTP</label><input type="text"></li> -->
+                    </ul>
+                </div>
+                <div class="arrow nav-left" onclick="myfun('cardThree','cardTwo')">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="arrow nav-right" id="submit">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <ul class="foot">
+            <h2>usefull links</h2>
+            <li><a href=""> Home </a> </li>
+            <li><a href=""> about </a> </li>
+            <li><a href=""> faq </a> </li>
+            <li><a href=""> blog</a> </li>
+            <li><a href=""> help</a> </li>
+        </ul>
+        <ul class="foot">
+            <h2>Newsletter</h2>
+            <li><input type="text"></li>
+            <li><button>subscribe now</button></li>
+        </ul>
+        <ul class="foot">
+            <h2>social</h2>
+            <li><a href=""> facebook </a> </li>
+            <li><a href=""> twitter </a> </li>
+            <li><a href=""> instagram </a> </li>
+            <li><a href=""> linkedin</a> </li>
+        </ul>
+    </footer>
+    <div id="load">
+        <img src="assets/loading.gif" alt="">
+    </div>
+    <script src="index.js"></script>
+    <script src="src/validate.js" type="module">
+    </script>
+</body>
+
+</html>

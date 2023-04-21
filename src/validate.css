@@ -1,0 +1,552 @@
+.secThree {
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #e6e6e6;
+    justify-content: center;
+    overflow: hidden;
+    display: none;
+}
+
+.arrow {
+    height: 3.2rem;
+    width: 3.2rem;
+    border: 1px solid;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c2929;
+    position: absolute;
+    bottom: 1rem;
+    z-index: 3;
+    transition: all 0.1ss;
+}
+
+.arrow:active {
+    transform: scale(0.98);
+}
+
+.nav-left {
+    left: 2rem;
+}
+
+.nav-right {
+    right: 1rem;
+}
+
+.arrow i {
+    font-size: 1.8rem;
+    color: #03FF68;
+    text-shadow: 2px 2px 10px #03FF68;
+}
+
+#submit {
+    border-radius: 20px;
+    width: 5rem;
+}
+
+#submit {
+    font-size: 1rem;
+    background-color: #2c2929;
+    transition: all 0.2s;
+}
+
+#submit button {
+    background: transparent;
+}
+
+#submit button:active {
+    transform: unset;
+}
+
+
+#submit:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 5px 2px lime;
+}
+
+.secThree ul label {
+    color: black;
+    width: 8rem;
+    font-weight: 400;
+}
+
+.cardOne {
+    display: flex;
+    align-items: center;
+    background-color: #e6e6e6;
+}
+
+.cardOne ul {
+    position: relative;
+    height: 30rem;
+    width: 25rem;
+    background-color: transparent;
+    padding: 3em 1rem;
+    box-shadow: 5px 5px 1px 0px rgb(94, 58, 255);
+    border: 1px solid;
+}
+
+.cardOne .arrow {
+    right: 1em;
+}
+
+.cardOne ul li {
+    margin: 1em 0;
+}
+
+
+.secThree input,
+.cardOne select {
+    background-color: rgb(187, 187, 187);
+    width: 14rem;
+    height: 30px;
+    padding: 0.2em 1em;
+}
+
+input:focus {
+    border: 3px solid rgb(94, 58, 255);
+}
+
+.cardTwo,
+.cardThree {
+    position: relative;
+    width: 100%;
+    padding: 1rem 5rem;
+    justify-content: center;
+    transform: translateX(100px);
+    background-color: #e6e6e6;
+    display: none;
+    opacity: 0;
+}
+
+.cardTwo {
+    flex-direction: column;
+}
+
+.cardTwo hr {
+    height: 5px;
+    background: rgb(94, 58, 255);
+}
+
+.cardTwo .man {
+    height: 25rem;
+    right: 18rem;
+    top: 7.5rem;
+    z-index: 0;
+    position: absolute;
+}
+
+.busInfo {
+    background-color: transparent;
+    height: 10rem;
+    padding: 1rem;
+    border-radius: 0px;
+    box-shadow: 5px 5px 1px 0px rgb(94, 58, 255);
+    border: 1px solid;
+}
+
+.busInfo h2 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.busInfo p {
+    font-size: 0.8rem;
+    display: inline-block;
+    letter-spacing: 1px;
+    margin: 1rem 3rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.busInfo p b {
+    display: inline-block;
+    width: 8rem;
+}
+
+.seatSelect {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.seatSelect #seatContainer {
+    height: 15rem;
+    width: 45rem;
+    max-width: 45rem;
+    background-color: #e6e6e6;
+    border: 2px solid orangered;
+    border-radius: 0px;
+    box-shadow: 5px 5px 1px 0px rgb(94, 58, 255);
+    padding: 10px;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+#cont-one,
+#cont-two {
+    display: flex;
+    background: transparent !important;
+}
+
+.seat {
+    padding: 5px;
+    height: 3rem;
+    margin: 0.2rem 1.2rem;
+    border-radius: 20%;
+}
+
+.stLegend li {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.stLegend li::before {
+    content: '';
+    position: absolute;
+    height: 1.1rem;
+    width: 2.3rem;
+    left: -50px;
+    border: 1px solid;
+}
+
+.stLegend li:nth-child(1)::before {
+    background-color: gray;
+}
+
+.stLegend li:nth-child(2)::before {
+    background-color: red;
+}
+
+.seatSelected {
+    background-color: lime;
+    border: none;
+}
+
+.cardThree {
+    flex-wrap: wrap;
+    gap: 0.5rem 5rem;
+}
+
+
+.cardThree>p {
+    color: red;
+    font-size: 1rem;
+
+}
+
+.card3 {
+    background-color: #EAEAEA;
+    border: 1px solid;
+    height: 10rem;
+    padding: 0.8rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 1px 0px rgb(94, 58, 255);
+}
+
+.card3 ul li {
+    margin-bottom: 0.2rem;
+    line-height: 2rem;
+    white-space: nowrap;
+}
+
+.card3 ul li label {
+    width: 8rem;
+    font-size: 0.8rem;
+}
+
+.card3 ul li span {
+    color: #2c2929;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+#cusInfo {
+    padding: 1rem 1.2rem;
+    max-width: 30rem;
+    min-width: min-content;
+    position: relative;
+}
+
+#cusInfo::before {
+    content: '';
+    position: absolute;
+    width: 0.4rem;
+    height: 80%;
+    left: 0.5rem;
+    background: lime;
+}
+
+#costInfo {
+    width: 25rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#payment {
+    min-width: min-content;
+    height: 12rem;
+}
+
+#payment label {
+    width: 10rem;
+}
+
+#payment li button {
+    padding: 0.5em .8em;
+    border-radius: 5px;
+    margin: 0 10px;
+    outline: none;
+    border: none;
+    color: #03FF68;
+    text-align: center;
+    background-color: #2c2929;
+}
+
+#payment p {
+    color: #1e3b5c;
+    text-shadow: 0px 4px 4px #00000040;
+    font-weight: 700;
+}
+
+.cd3Img {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1rem;
+}
+
+.cd3Img i {
+    font-size: 3rem;
+    transition: all 0.1s ease;
+}
+
+.cd3Img i:hover {
+    text-shadow: 0px 0px 30px black;
+}
+
+li {
+    position: relative;
+}
+
+.pl {
+    display: inline;
+    position: relative;
+}
+
+#item1,
+#item2 {
+    background: white;
+    width: 14rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 10px;
+    border-radius: 5px;
+    /* left: 37%; */
+    z-index: 5;
+}
+
+#to {
+    max-width: 12rem;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.pl p {
+    padding: 5px;
+    margin: 5px 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.pl p:hover {
+    background-color: gray;
+}
+
+.pl p:active {
+    background: #1e3b5c;
+}
+
+@media(max-width:700px) {
+    .arrow {
+        height: 1.6rem;
+        width: 1.6rem;
+    }
+
+    .arrow i {
+        font-size: 1.2rem;
+    }
+
+    .cardOne ul {
+        height: 28rem;
+        width: 20rem;
+        padding: 1.5rem 0.8rem;
+    }
+
+    .secThree input,
+    .cardOne select {
+        width: 9rem;
+        height: 1.5rem;
+        padding: 0.1em 1em;
+        font-size: 0.8rem;
+    }
+
+    .cardTwo,
+    .cardThree {
+        padding: 0.5rem 1rem;
+    }
+
+    .cardTwo .man {
+        height: 15rem;
+        right: 2rem;
+        top: 10rem;
+        filter: opacity(0.2);
+        z-index: 0;
+    }
+
+    .seatSelect #seatContainer {
+        max-width: 20rem;
+        height: 10rem;
+        z-index: unset;
+        margin: 2rem 0;
+        /* margin-left: ; */
+        transform: rotate(90deg);
+    }
+
+    .seatSelect .stLegend {
+        font-size: 0.7rem;
+    }
+
+    .busInfo {
+        width: 100%;
+        height: 10rem;
+        margin-bottom: 2rem;
+        z-index: 2;
+    }
+
+    .busInfo p {
+        text-align: center;
+        display: block;
+        font-size: 0.6rem;
+        margin: 0.8rem 1.2rem;
+    }
+
+    .seat {
+        height: 2rem;
+        min-width: 1rem;
+        margin: 0.2rem;
+        transform: rotate(-90deg);
+    }
+
+    .cardThree>p {
+        font-size: 0.7rem;
+    }
+
+    #cusInfo {
+        padding-left: 2rem;
+        max-width: 20rem;
+        position: relative;
+    }
+
+    .card3 {
+        height: 8rem;
+        max-width: 20rem;
+    }
+
+    .pl p {
+        padding: 2px;
+        margin: 2px 0;
+        font-size: 0.5rem;
+        cursor: pointer;
+    }
+
+    #item1,
+    #item2 {
+        background: white;
+        width: 7rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        margin-top: 10px;
+        border-radius: 5px;
+        z-index: 99;
+    }
+
+    .card3 ul li {
+        line-height: 1rem;
+    }
+
+    .card3 ul li label {
+        width: 5rem;
+        font-size: 0.6rem;
+    }
+
+    .card3 ul li span {
+        font-size: 0.8rem;
+    }
+
+    #cusInfo::before {
+        content: '';
+        position: absolute;
+        width: 0.4rem;
+        height: 80%;
+        left: 0.8rem;
+        background: lime;
+    }
+
+    #costInfo {
+        width: min-content;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    #payment {
+        width: 20rem;
+        height: 10rem;
+    }
+
+    #payment label {
+        width: 7rem;
+    }
+
+    #payment li button {
+        padding: 0.3em .5em;
+        border-radius: 5px;
+        font-size: 0.6rem;
+        margin: 0 10px;
+        outline: none;
+        border: none;
+        color: #03FF68;
+        text-align: center;
+        background-color: #2c2929;
+    }
+
+    #payment p {
+        color: #1e3b5c;
+        text-shadow: 0px 4px 4px #00000040;
+        font-weight: 700;
+        font-size: 0.6rem;
+    }
+
+    .cd3Img {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    .cd3Img i {
+        font-size: 1rem;
+        transition: all 0.1s ease;
+    }
+
+    .cd3Img i:hover {
+        text-shadow: 0px 0px 30px black;
+    }
+
+}

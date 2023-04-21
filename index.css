@@ -1,0 +1,469 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 2.8rem;
+    background-color: #515857;
+    z-index: 99;
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+.secOne {
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(assets/whiteBusFlip.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.Main {
+    display: flex;
+}
+
+.Main .heading {
+    color: white;
+    font-weight: 700;
+    word-spacing: 10px;
+    z-index: 2;
+
+}
+
+.Main .heading {
+    margin-left: 2rem;
+    position: relative;
+    margin-top: 8rem;
+    font-size: 2.3rem;
+    width: 25rem;
+    text-align: left;
+
+}
+
+.heading i {
+    font-size: 0.8rem;
+    font-weight: 100;
+    margin-left: 0.2rem;
+}
+
+.heading::before {
+    content: '';
+    width: 0.8rem;
+    height: 40vh;
+    background-color: #0FEB67;
+    position: absolute;
+    left: -3rem;
+    top: -1rem;
+}
+
+.Bus {
+    width: 25rem;
+    margin-top: 5rem;
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    margin-left: 4rem;
+    z-index: 2;
+}
+
+.bgdesign {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* z-index: ; */
+    width: 100%;
+}
+
+.secOne>p {
+    text-align: center;
+    font-size: 0.7rem;
+    margin: 3rem auto 0;
+    width: 40rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    z-index: 2;
+}
+
+.username {
+    color: gold;
+    letter-spacing: 2px;
+}
+
+.hednav {
+    color: lime;
+    margin: 10px 20px;
+    letter-spacing: 10px;
+    cursor: default;
+}
+
+#load {
+    display: none;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+
+.mybus {
+    color: lime;
+
+}
+
+header .form {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    width: 8rem;
+    text-align: center;
+    z-index: 99;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    cursor: default;
+    transition: all 0.5s ease-in;
+}
+
+.form:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.form:active {
+    background-color: rgb(37, 37, 37);
+}
+
+.reg,
+.log {
+    display: none;
+    position: absolute;
+    max-width: 24rem;
+    margin: 0 1.5rem;
+    background: white;
+    box-shadow: 5px 5px 1px 0px rgb(94, 58, 255);
+    transform: translateY(100px);
+    opacity: 0;
+    border: 1px solid;
+    padding: 0.5rem 1rem;
+    z-index: 99;
+}
+
+.regContainer,
+.logContainer {
+    text-transform: capitalize;
+}
+
+.popup {
+    position: absolute;
+    transform: translateY(-100px);
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    color: #00ff00;
+    opacity: 1;
+    padding: 5rem 2rem;
+    margin: 1rem;
+    min-width: 10rem;
+    font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px -5px 10px black;
+    transition: all 1s ease-in-out;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: gray;
+    display: inline-block;
+}
+
+.regContainer h1 {
+    margin: 5px 0;
+    font-size: 2rem;
+}
+
+.regContainer p {
+    margin: 5px 0;
+    font-size: 0.8rem;
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: rgb(187, 187, 187);
+    width: 100%;
+    height: 2rem;
+    padding: 0.2em 1em;
+
+
+}
+
+
+
+form input[type=submit] {
+    text-align: center;
+    margin: 0.8rem 0;
+    /* padding: 8px 0; */
+    padding: 0.8rem;
+    font-weight: bolder;
+    height: 2.8rem;
+    /* width: 50%; */
+    background-color: green;
+    font-size: 1.2rem;
+    cursor: default;
+}
+
+form input[type=submit]:active {
+    background-color: rgb(4, 255, 4);
+}
+
+::-webkit-outer-spin-button {
+    margin: 0;
+    appearance: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+h4 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 5px;
+}
+
+
+.secTwo {
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    overflow: hidden;
+
+}
+
+.why_cho {
+    position: relative;
+}
+
+.why_cho img {
+    display: block;
+    margin: 0 auto;
+    width: 15rem;
+    position: relative;
+    top: 20px;
+}
+
+.why_cho h1 {
+    font-size: 1.5em;
+    width: fit-content;
+    padding: 0.7rem 1.1rem;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgb(3, 74, 102);
+
+}
+
+.cards {
+    /* margin: 5px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 17.7rem;
+    max-width: 21.8rem;
+    margin: 1.1em 0.1em;
+    border: 1px solid black;
+    background-color: rgb(250, 250, 250);
+    position: relative;
+    transition: all 0.1s ease;
+    /* box-shadow: 0px 5px 5px 2px black; */
+    /* border-radius: 10px; */
+
+    border-top: 20px solid #161817;
+}
+
+.card:hover {
+    scale: 1.01;
+}
+
+.card img {
+    max-width: 70px;
+    display: block;
+    margin: 0.7em auto;
+}
+
+.card h2 {
+    text-align: center;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.card p {
+    margin-top: 1em;
+    padding: 0 1.2rem;
+    text-align: justify;
+    color: gray;
+    font-size: 0.8rem;
+    line-height: 20px;
+}
+
+footer {
+    height: 18.7rem;
+    width: 100%;
+    padding: 20px;
+    background-color: #161817;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: space-evenly;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.foot {
+    margin: 4rem 0.5rem;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.foot li {
+    letter-spacing: 2px;
+    margin-bottom: 1.2rem;
+    font-size: 0.8em;
+}
+
+li a {
+    color: rgb(152, 177, 172);
+}
+
+footer .foot:nth-child(2) {
+    text-align: center;
+}
+
+.foot h2 {
+    margin-bottom: 2em;
+    color: white;
+    font-weight: 700;
+    font-size: 0.9em;
+    letter-spacing: 3px;
+}
+
+.foot input {
+    border: 3px solid rgb(187, 187, 187);
+}
+
+.foot button {
+    font-weight: 700;
+    padding: 1em;
+
+}
+
+button {
+    text-transform: uppercase;
+    color: #00ff00;
+    border-radius: 10px;
+    background: rgb(4, 53, 4);
+    border: none;
+    transition: all 0.2s ease;
+}
+
+button:active:not(#submit button) {
+    transform: scale(0.95);
+    box-shadow: 0 0 5px 2px lime;
+}
+
+@media(max-width:700px) {
+    .welBan {
+        font-size: 1.2rem;
+        letter-spacing: 5px;
+    }
+
+
+
+    .Main {
+        height: min-content;
+        flex-direction: column;
+    }
+
+    .Main .heading {
+        margin-top: 5rem;
+        margin-left: 3rem;
+        color: #ffffff;
+        font-weight: 700;
+        white-space: normal;
+        position: relative;
+        padding: 1rem;
+        display: block;
+        z-index: 2;
+    }
+
+    .Main .heading {
+        font-size: 1.5rem;
+        width: 20rem;
+
+    }
+
+    .bgdesign {
+        width: 50rem;
+        display: block;
+        top: 1rem;
+    }
+
+    .Bus {
+        opacity: 0.1;
+        margin-top: 2rem;
+    }
+
+    .secOne>p {
+        font-size: 0.8rem;
+        width: 20rem;
+        margin-top: 1rem;
+    }
+
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(6, 218, 101);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: lime;
+}
